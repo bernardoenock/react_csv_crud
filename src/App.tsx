@@ -1,18 +1,19 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import ApiPage from './pages/ApiPage';
-import CsvPage from './pages/CsvPage';
+import MePage from './pages/MePage';
+import MainPage from './pages';
+import './index.css';
 
 function App() {
   return (
     <div>
-      <nav style={{ marginBottom: '20px' }}>
-        <Link to="/" style={{ marginRight: '10px' }}>Fetch Users</Link>
-        <Link to="/csv">CSV Manager</Link>
+      <nav className="navbar">
+        <Link to="/react_csv_crud/" style={{ marginRight: '10px' }}>Home</Link>
+        <Link to="/react_csv_crud/me">Sobre o candidato</Link>
       </nav>
 
       <Routes>
-        <Route path="/" element={<ApiPage />} />
-        <Route path="/csv" element={<CsvPage />} />
+        <Route path="/react_csv_crud/" element={<MainPage />} />
+        <Route path="/react_csv_crud/me" element={<MePage />} />
       </Routes>
     </div>
   );

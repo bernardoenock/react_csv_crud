@@ -1,30 +1,91 @@
-# REACT CSV CRUD
+# 📊 REACT CSV CRUD
 
-## Requisitos
+Uma aplicação em React que simula um banco de dados baseado em um único arquivo CSV. Os dados são obtidos da [Random Data API](https://random-data-api.com/documentation), com suporte a CRUD completo, upload/download de CSV e pesquisa avançada por nome de usuário e e-mail.
 
-[x] O aplicativo deve exibir uma página com a listagem de usuários obtidos por meio da API do random-data-api (https://random-data-api.com/documentation).
-- A exibição é feita quando a página é carregada e toda vez que clicamos em "Carregar novos usuarios".
+---
 
-[x] Após a listagem, deve ser exibida uma opção para gravar os dados em um banco interno gerenciado por você, que será um arquivo CSV (separado por vírgula ou ponto e vírgula).
-- Ah uma opção para gravar os dados, que é um arquivo CSV, na maquina do usuario.
+## 🚀 Funcionalidades
 
-[x] Após a gravação, exiba uma opção para editar ou excluir os registros gravados por meio do consumo da API.
-- Ah uma opção para editar ou excluir os registros gravados por meio do consumo da API.
+✅ Listagem de usuários gerados automaticamente via API  
+✅ Upload de arquivo CSV com usuários  
+✅ Download do banco de dados como CSV  
+✅ Edição e exclusão de usuários diretamente da tabela  
+✅ Paginação e responsividade mobile-first 📱  
+✅ Pesquisa filtrando por **username** e **email**  
+✅ Menu de navegação com rotas separadas  
+✅ Totalmente funcional com arquivos CSV únicos e integridade garantida
 
-[x] A tela de consumo da API deve ser uma opção no menu, disponível a qualquer momento, para adicionar mais dados ao arquivo CSV.
-- O consumo da API é uma opção no menu, disponível a qualquer momento.
+---
 
-[x] Deve ser utilizado um arquivo CSV único. Se houver, por exemplo, 1.000 linhas e o usuário editar ou excluir a linha 50, a integridade do arquivo deve ser preservada.
-- A integridade do arquivo é unica.
+## 📂 Estrutura do Projeto
 
-[x] O aplicativo também deve conter uma funcionalidade de pesquisa com base em pelo menos dois campos do arquivo CSV.
-- Ah a funcionalidade de pesquisa com base em dois campos do arquivo 'username' e 'email'
+```
+📁 src/
+│ ├── components/
+│ │   └── DialogEdit.tsx
+│ ├── hooks/
+│ │   ├── usePagination.ts
+│ │   └── useUsers.ts
+│ ├── pages/
+│ │   ├── index.tsx        ← Página principal
+│ │   └── MePage.tsx       ← Sobre mim
+│ ├── services/
+│ │   └── httpClient.ts
+│ ├── utils/
+│ │   └── csvUtils.ts      ← Funções para parse e download de CSV
+│ ├── App.tsx              ← Rotas e navegação
+│ ├── index.tsx
+```
 
-[x] Você está livre para utilizar o framework que for mais conveniente dentro da linguagem Node.js ou Java.
-- Optei por utilizar o React para realizar as tarefas.
+---
 
-[x] O código deverá ser versionado e armazenado em um repositório no GitHub.
-- Disponivel em: 
+## 🛠 Tecnologias Utilizadas
 
+- ⚛️ **React** (com TypeScript)
+- 📦 **Axios** – para chamadas HTTP
+- 📁 **PapaParse** – leitura e escrita de CSV
+- 💾 **FileSaver.js** – salvar arquivos do lado do cliente
+- 📐 Estilo CSS Mobile-First puro
 
-## Rodar Localmente
+---
+
+## 🌐 Acesso Online
+
+Você pode acessar a aplicação funcionando diretamente neste link:  
+🔗 [https://bernardoenock.github.io/react_csv_crud/](https://bernardoenock.github.io/react_csv_crud/)
+
+---
+
+## 🖥️ Rodar Localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/bernardoenock/react_csv_crud.git
+cd react_csv_crud
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev  # ou npm start se estiver usando outro boilerplate
+
+# Acesse via http://localhost:5173/react_csv_crud/ (caso use Vite)
+```
+
+---
+
+## 🧪 Requisitos Atendidos
+
+- ✅ Listar usuários da API `random-data-api`
+- ✅ Armazenar dados em um **único** arquivo CSV
+- ✅ Permitir edição e exclusão mantendo integridade dos dados
+- ✅ Funcionalidade de pesquisa por `username` e `email`
+- ✅ Upload/Download de CSV do/para o cliente
+- ✅ Totalmente versionado com Git
+
+---
+
+## ✨ Sobre o Autor
+
+Desenvolvido por **[Bernardo Enock](https://github.com/bernardoenock)**  
+💼 Desenvolvedor React Pleno.
