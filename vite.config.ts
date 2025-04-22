@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// substitua 'react_csv_crud' pelo nome do seu repositório
 export default defineConfig({
+  base: '/react_csv_crud/',
   plugins: [react()],
 })
