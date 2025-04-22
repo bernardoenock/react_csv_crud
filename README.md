@@ -1,54 +1,30 @@
-# React + TypeScript + Vite
+# REACT CSV CRUD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requisitos
 
-Currently, two official plugins are available:
+[x] O aplicativo deve exibir uma página com a listagem de usuários obtidos por meio da API do random-data-api (https://random-data-api.com/documentation).
+- A exibição é feita quando a página é carregada e toda vez que clicamos em "Carregar novos usuarios".
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[x] Após a listagem, deve ser exibida uma opção para gravar os dados em um banco interno gerenciado por você, que será um arquivo CSV (separado por vírgula ou ponto e vírgula).
+- Ah uma opção para gravar os dados, que é um arquivo CSV, na maquina do usuario.
 
-## Expanding the ESLint configuration
+[x] Após a gravação, exiba uma opção para editar ou excluir os registros gravados por meio do consumo da API.
+- Ah uma opção para editar ou excluir os registros gravados por meio do consumo da API.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[x] A tela de consumo da API deve ser uma opção no menu, disponível a qualquer momento, para adicionar mais dados ao arquivo CSV.
+- O consumo da API é uma opção no menu, disponível a qualquer momento.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+[x] Deve ser utilizado um arquivo CSV único. Se houver, por exemplo, 1.000 linhas e o usuário editar ou excluir a linha 50, a integridade do arquivo deve ser preservada.
+- A integridade do arquivo é unica.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+[x] O aplicativo também deve conter uma funcionalidade de pesquisa com base em pelo menos dois campos do arquivo CSV.
+- Ah a funcionalidade de pesquisa com base em dois campos do arquivo 'username' e 'email'
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+[x] Você está livre para utilizar o framework que for mais conveniente dentro da linguagem Node.js ou Java.
+- Optei por utilizar o React para realizar as tarefas.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+[x] O código deverá ser versionado e armazenado em um repositório no GitHub.
+- Disponivel em: 
+
+
+## Rodar Localmente
